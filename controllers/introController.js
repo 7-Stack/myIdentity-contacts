@@ -1,7 +1,7 @@
-const Identity = require("../models/contactModel");
+const Identity = require("../models/identityModel");
 
 class IntroController {
-  async getallIdentity(req, res) {
+  async getAllIdentity(req, res) {
     console.log("The request body is");
     const allIdentity = await Identity.find();
     res.status(200).json(allIdentity);

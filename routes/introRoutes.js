@@ -8,8 +8,19 @@ const {
     deleteIdentity
 } = require("../controllers/introController")
 
-router.route("/").get(getAllIdentity).post(createIdentity);
-// router.route("/:id").get(getIdentity);
-router.route("/:id").put(updateIdentity).delete(deleteIdentity).get(getIdentity);
+// router.route("/").get(getAllIdentity).post(createIdentity);
+// // router.route("/:id").get(getIdentity);
+// router.route("/:id").put(updateIdentity).delete(deleteIdentity).get(getIdentity);
+
+router.post('/', createIdentity);
+
+router.get('/', getAllIdentity)
+
+router.get("/:id", getIdentity);
+
+router.put("/:id", updateIdentity)
+
+router.delete('/:id', deleteIdentity); 
 
 module.exports = router;
+
