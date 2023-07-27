@@ -19,4 +19,4 @@ const identitySchema = new mongoose.Schema({
 }
 );
 
-module.exports = mongoose.model("identity", identitySchema);
+module.exports = mongoose.model("Identity", identitySchema);
