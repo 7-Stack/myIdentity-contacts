@@ -9,12 +9,12 @@ const app = express();
 const basePath = "/api/v1"
 
 app.use(express.json());
-app.use(`${basePath}/contacts`, require("./routes/intro.routes"));
-app.use(`${basePath}/users`, require("./routes/userRoutes"));
+app.use(`/api/v1/contacts`, require("./routes/intro.routes"));
+app.use(`/api/v1/users`, require("./routes/userRoutes"));
 
-app.get(`${basePath}/docs`, (req, res) => {
+app.get(`/api/v1/docs`, (req, res) => {
 
-    res.redirect("http://localhost:5002/api/users");
+    res.redirect("https://documenter.getpostman.com/view/28028237/2s9XxsUFzY");
 });
 
 app.use(errorHandler);
